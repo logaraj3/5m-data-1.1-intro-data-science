@@ -76,11 +76,9 @@ def count_repeats(string):
     0
     """
     count = 0
-    seen = set()  # Track seen characters
     for char in string:
-        if string.count(char) > 1 and char not in seen:
-            count += string.count(char)
-            seen.add(char)  # Mark this character as counted
+        if string.count(char) > 1:
+            count += 1
             
     return count
 
