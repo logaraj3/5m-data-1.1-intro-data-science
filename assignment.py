@@ -3,7 +3,7 @@
 # Write a function that prints "Fizz" when the number is divisible by 3, "Buzz" when the number is divisible by 5
 # and "FizzBuzz" when the number is divisible by both 3 and 5.
 # If the number is not divisible by either 3 or 5, the function should return the number itself.
-#test 
+
 
 def fizz_buzz(number):
     """Returns Fizz if number is divisible by 3, Buzz if divisible by 5, FizzBuzz if divisible by both 3 and 5.
@@ -15,7 +15,14 @@ def fizz_buzz(number):
     >>> fizz_buzz(15)
     'FizzBuzz'
     """
-    return
+    if number % 3 == 0 and number % 5 == 0:
+        return "FizzBuzz"
+    elif number % 3 == 0:
+        return "Fizz"
+    elif number % 5 == 0:
+        return "Buzz"
+    else:
+        return number
 
 
 # Question 2
@@ -30,7 +37,10 @@ def sum_of_squares(numbers):
     >>> sum_of_squares([2, 4, 6])
     56
     """
-    return
+    total = 0 
+    for number in numbers:
+        total += number ** 2
+    return total
 
 
 # Question 3
@@ -45,7 +55,12 @@ def count_vowels(string):
     >>> count_vowels("aeiou")
     5
     """
-    return
+    count = 0
+    list = ['a','e','i','o','u']
+    for char in string:
+        if char in list:
+            count +=1
+    return count
 
 
 # Question 4
@@ -60,8 +75,14 @@ def count_repeats(string):
     >>> count_repeats("aeiou")
     0
     """
-    return
-
+    count = 0
+    seen = set()  # Track seen characters
+    for char in string:
+        if string.count(char) > 1 and char not in seen:
+            count += string.count(char)
+            seen.add(char)  # Mark this character as counted
+            
+    return count
 
 if __name__ == "__main__":
     import doctest
