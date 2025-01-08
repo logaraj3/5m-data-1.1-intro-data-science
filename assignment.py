@@ -3,7 +3,7 @@
 # Write a function that prints "Fizz" when the number is divisible by 3, "Buzz" when the number is divisible by 5
 # and "FizzBuzz" when the number is divisible by both 3 and 5.
 # If the number is not divisible by either 3 or 5, the function should return the number itself.
-
+#test 
 
 def fizz_buzz(number):
     """Returns Fizz if number is divisible by 3, Buzz if divisible by 5, FizzBuzz if divisible by both 3 and 5.
